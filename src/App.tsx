@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { 
-  Activity, AlertTriangle, Eye, Layers, 
-  MessageSquare, Mic, MicOff, RefreshCw, Shield, Sparkles, 
-  Sun, Moon, Sliders, AlertCircle, ArrowRight, CheckCircle2,
-  BarChart3, Cpu, Terminal, Zap, FileText, History, Play, Pause, TrendingUp, Info
+  Eye, Layers, MessageSquare, Mic, MicOff, RefreshCw, Sparkles, 
+  BarChart3, Cpu, Terminal, Zap, History, AlertCircle
 } from 'lucide-react';
 
 type Modality = 'text' | 'voice' | 'image' | 'video';
@@ -270,7 +268,7 @@ export default function App() {
 
       {/* NAVIGATION BAR */}
       <header style={styles.header}>
-        <div style={{ display: 'flex', itemsCenter: 'center', gap: '12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={styles.logoBadge}>
             <Zap size={20} color="#ffffff" />
           </div>
@@ -440,7 +438,7 @@ export default function App() {
                   />
                   
                   {/* PRESET BUTTONS */}
-                  <div style={{ display: 'flex', justifyBetween: 'space-between', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
                     <div style={{ display: 'flex', gap: '8px' }}>
                       {[
                         { text: 'I am stuck and frustrated with this issue!', label: 'Frustrated Sample' },
@@ -540,7 +538,7 @@ export default function App() {
           {/* RIGHT SIDEBAR - AI TELEMETRY PANEL */}
           <div style={{ flex: '1 1 35%', display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <div style={styles.card}>
-              <div style={{ display: 'flex', justifyBetween: 'space-between', alignItems: 'center', borderBottom: '1px solid #1f2937', paddingBottom: '12px', marginBottom: '16px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #1f2937', paddingBottom: '12px', marginBottom: '16px' }}>
                 <h3 style={{ fontSize: '14px', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <BarChart3 size={16} color="#818cf8" />
                   <span>AI Telemetry & Output</span>
@@ -667,7 +665,7 @@ export default function App() {
                 ))}
               </div>
             ) : (
-              <div style={{ color: '#6b7280', fontSize: '13px', textCenter: 'center' }}>No records logged yet.</div>
+              <div style={{ color: '#6b7280', fontSize: '13px', textAlign: 'center' }}>No records logged yet.</div>
             )}
           </div>
         </main>
